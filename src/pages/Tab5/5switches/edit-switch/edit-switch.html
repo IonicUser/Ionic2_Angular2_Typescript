@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title *ngIf="switchModal">{{switchModal.name}}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content >
+  <ion-item-group *ngIf="switchModal">
+    <ion-item-divider class="itm-divider-btom"><span class="txt-silver">Switch Details</span></ion-item-divider>
+    <ion-item class="itm">
+      <span>Appliance Name</span>
+      <span item-right class="txt-normal">{{switchModal.name}}</span>
+    </ion-item>
+    <ion-item class="itm">
+      <span>Switch Type</span>
+      <span item-right class="txt-normal">{{switchModal.switch_type}}</span>
+    </ion-item>
+    <ion-item class="itm">
+      <span>Appliance Type</span>
+      <span item-right class="txt-normal">{{switchModal.appliance_type}}</span>
+    </ion-item>
+    <ion-item class="itm">
+      <span>Hoom</span>
+      <span item-right class="txt-normal">{{switchModal.home_type}}</span>
+    </ion-item>
+    <ion-item class="itm">
+      <span>Room</span>
+      <span item-right class="txt-normal">{{switchModal.room_type}}</span>
+    </ion-item>
+    <ion-item class="itm">
+      <span>Switchboard</span>
+      <span item-right class="txt-normal">{{switchModal.sboard_type}}</span>
+    </ion-item>
+  </ion-item-group>
+  <p>&nbsp;</p>
+  <button  class="btn" ion-button block no-margin><span class="txt-red" (click)="editSwitch(switchModal)">Edit Switch Details</span> </button>
+</ion-content>

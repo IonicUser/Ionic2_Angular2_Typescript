@@ -1,0 +1,57 @@
+<ion-header>  
+	<ion-navbar>         
+		<ion-title>Create Home</ion-title> 
+	</ion-navbar>  
+</ion-header>  
+<ion-content no-padding> 
+<<<<<<< HEAD
+	<form (ngSubmit)="createHome()" #registerForm="ngForm"> 
+		<ion-item-group>
+			<ion-item-divider class="itm-divider-btom">
+				<span class="txt-silver">Create New Home</span>
+			</ion-item-divider>
+			<ion-item class="itm">
+				<ion-label>Home Name (Unique)</ion-label>
+				<ion-input type="text" [(ngModel)]="response.name"  [ngModelOptions]="{standalone: true}" required item-right class="txt-normal" text-right autofocus></ion-input>
+			</ion-item>
+			<ion-item class="itm">
+				<ion-label>Display Name</ion-label>
+				<ion-input type="text"[(ngModel)]="response.dName"  [ngModelOptions]="{standalone: true}" required item-right class="txt-normal" text-right></ion-input>
+
+  <form (ngSubmit)="createHome()" #registerForm="ngForm"> 
+	<ion-item-group>
+		<ion-item-divider class="itm-divider"><span class="txt-silver">Create New Home</span></ion-item-divider>
+			<ion-item class="itm">
+				<ion-label>Home Name (Unique)</ion-label>
+				<ion-input type="text" [(ngModel)]="response.name"  [ngModelOptions]="{standalone: true}" required item-right class="txt-normal" text-right placeholder="Enter Display Name"></ion-input>
+			</ion-item>
+			<ion-item class="itm">
+				<ion-label>Display Name</ion-label>
+				<ion-input type="text"[(ngModel)]="response.dName"  [ngModelOptions]="{standalone: true}" required item-right class="txt-normal" text-right placeholder="Enter Home Name"></ion-input>
+
+			</ion-item>
+			<ion-item class="itm" *ngIf="show">
+				<ion-label>Make it default ?</ion-label>
+				<ion-toggle color="energized"  [(ngModel)]="def" [ngModelOptions]="{standalone: true}"></ion-toggle>
+			</ion-item>
+			<ion-item class="itm">
+				<ion-label>Geo Location </ion-label>
+				<span item-right *ngIf="grab" class="txt-orange">{{latlong[0]}},{{latlong[1]}}</span>
+
+				<button *ngIf="!grab" ion-button item-right class="txt-orange" text-right (click)="locate()" outline style="border-color:#ff9500"  >Grab</button>
+			</ion-item>					
+		</ion-item-group>
+<br>
+		<button class="txt-orange" ion-button full no-margin type="submit">Create Home	</button>
+	</form>
+
+					<button *ngIf="!grab" ion-button item-right class="txt-orange" text-right (click)="locate()" outline style="border-color:#ff9500"  >Grab</button>
+			</ion-item>					
+	</ion-item-group>
+	<ion-item-group>
+		<ion-item-divider class="itm-divider"> &nbsp; </ion-item-divider>
+	</ion-item-group>
+	<button class="txt-gold" ion-button block no-margin type="submit">Create Home	</button>
+  </form>
+
+</ion-content>     

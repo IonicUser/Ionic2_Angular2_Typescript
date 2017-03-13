@@ -1,0 +1,34 @@
+<ion-header>  
+	<ion-navbar>         
+    <ion-title>Edit {{ this.roomModal.name }}</ion-title> 
+	</ion-navbar>  
+</ion-header>  
+<ion-content no-padding> 
+  <form (ngSubmit)="editRoom()" #registerForm="ngForm">
+	<ion-item-group>
+		<ion-item-divider class="itm-divider"><span class="txt-silver">Edit Room Details</span></ion-item-divider>
+			<ion-item class="itm">
+				<ion-label>Room Name</ion-label>
+				<ion-input type="text" item-right class="txt-normal" text-right [(ngModel)]="this.roomModal.name" [ngModelOptions]="{standalone: true}"></ion-input>
+			</ion-item>
+	    <ion-item class="itm">
+        <ion-label>Room Type</ion-label>
+        <ion-select [(ngModel)]="this.roomModal.room_type" [ngModelOptions]="{standalone: true}">
+          <ion-option>kitchen</ion-option>
+          <ion-option>bathroom</ion-option>
+          <ion-option>bedroom</ion-option>
+          <ion-option>hall</ion-option>
+          <ion-option>livingroom</ion-option>
+          <ion-option>sittingroom</ion-option>
+          <ion-option>study</ion-option>
+          <ion-option>other</ion-option>
+        </ion-select>
+      </ion-item> 				
+	</ion-item-group>
+	<ion-item-group>
+		<ion-item-divider class="itm-divider"> &nbsp; </ion-item-divider>
+	</ion-item-group>
+  
+  <button class="txt-gold" ion-button block no-margin type="submit">Update Room	</button>
+	</form>
+</ion-content>     

@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title> Rooms </ion-title>
+    <!-- <ion-buttons end class="txt-gold"> 
+    <button clear ion-button>
+       <ion-icon item-right name="close" class="txt-white"></ion-icon>
+     </button> 
+   </ion-buttons> -->
+  </ion-navbar>
+</ion-header>
+<ion-content no-padding>
+  <ion-item-group>
+    <ion-item-divider class="itm-divider-btom bdr-btom-none">
+      <span class="txt-gold"> Rooms in the default home</span>
+    </ion-item-divider>
+    <ion-row no-padding *ngFor="let i of data">
+     
+      <ion-col class="itm1 bdr-btom-rt-00" ion-item (click)="goToSwitchesinTheRoom(i,i.room_name)">
+        <span class="font-2-5rem"></span>{{i.room_name}} <br>
+        <span class="txt-orange font-1-5rem"> Total: </span>
+        <span class="txt-normal font-1-5rem"> {{i.devices.length}} </span>
+        <span class="txt-gold font-1-5rem"> Active: </span>
+        <span class="txt-normal font-1-5rem"> {{i.devices | activeCounts}} </span>
+        <span class="txt-red font-1-5rem"> Inactive: </span>
+        <span class="txt-normal font-1-5rem"> {{i.devices | inactiveCounts}}</span>
+      </ion-col>
+      <ion-col class="itm1 lbl-m-0" text-center width-20 no-padding no-margin>
+        <button ion-button full clear no-padding no-margin class="wh-100">
+        <ion-icon name="power" class="txt-red font-2-5rem"></ion-icon>
+      </button>
+      </ion-col>
+    </ion-row>
+  </ion-item-group>
+</ion-content>

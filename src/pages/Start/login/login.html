@@ -1,0 +1,76 @@
+<!--
+<ion-content  class="content1">
+<div class="login1">
+  <form class="login-container">
+        <button ion-button item-right icon-left block style="background: #3b5998;padding:15px;margin-top:15px;" (click)="fbLogin();">
+        <ion-icon name="logo-facebook"></ion-icon>Login via Facebook
+    </button><hr>
+    <button ion-button item-right icon-left block style="background: #d34836;padding:15px;margin-top:15px;">
+        <ion-icon name="logo-googleplus"></ion-icon>Login via Google
+    </button>
+  </form>
+</div>
+<div class="login">
+  <div class="login-triangle"></div>
+  
+  <h3 class="login-header">Log in with Email</h3>
+
+  <form class="login-container" (ngSubmit)="login()" #registerForm="ngForm">
+    <ion-input [(ngModel)]="registerCredentials.email"  [ngModelOptions]="{standalone: true}" required type="email" placeholder="Email"></ion-input>
+    
+    <ion-input [(ngModel)]="registerCredentials.pass"  [ngModelOptions]="{standalone: true}" required type="password" placeholder="Password"></ion-input>
+    <button ion-button block type="submit" value="Log in">Login</button>
+  </form>
+</div>
+<button ion-button clear (click)='goToSignUp();'>not a member? sign up</button>
+{{uid}}
+{{registerCredentials.email}}
+
+
+</ion-content>-->
+
+
+<ion-content padding  style="background:url('assets/img/login-screen.png'); ">
+  <div class="logo" text-center>
+    <!-- <img src="assets/img/logo.png" alt="KIOT logo">
+     -->
+     <p class="min-ht">&nbsp;</p>        
+  </div>     
+   
+  <form (ngSubmit)="login()" #registerForm="ngForm"> 
+    <ion-list>       
+      <ion-item> 
+        <ion-icon name="md-mail" item-left></ion-icon>
+        <ion-input [(ngModel)]="registerCredentials.email"  [ngModelOptions]="{standalone: true}" required  type="email" placeholder="Email Address "></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list>   
+      <ion-item class="br_top">
+        <ion-icon name="md-lock" item-left></ion-icon>
+        <ion-input [(ngModel)]="registerCredentials.password"  [ngModelOptions]="{standalone: true}" required type="password" placeholder="Password "></ion-input>
+      </ion-item>
+    </ion-list> 
+    <br/>     
+    <ion-row responsive-sm no-padding> 
+      <ion-col no-padding>
+        <button ion-button class="btn_ff" type="submit" block >Login</button>
+      </ion-col>
+      <span text-center class="txt_ff"> OR </span>
+      <ion-col no-padding> 
+        <button ion-button block class="btn_fb">
+          <ion-icon name="logo-facebook"></ion-icon> &nbsp;  Login with Facebook
+        </button>
+      </ion-col>
+    </ion-row> 
+    <br/>
+    <ion-row text-center no-padding>
+      <ion-col width-50 text-left no-padding>
+        <a class="txt_ff" (click)="goToForgotPassword()"> I forgot password  </a> 
+      </ion-col>
+      <ion-col width-50 text-right no-padding>
+        <a class="txt_ff" (click)='goToSignUp();'> Create new account </a>
+      </ion-col>
+    </ion-row> 
+  </form>
+
+</ion-content>

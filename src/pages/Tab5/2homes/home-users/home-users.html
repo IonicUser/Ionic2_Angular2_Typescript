@@ -1,0 +1,65 @@
+<!--
+  Generated template for the HomeUsers page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>homeUsers</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <h2>Prime User</h2>
+    <ion-list>
+        <ion-item (click)="showPrimDetails()">
+        {{prim_user}}
+        </ion-item>
+    </ion-list>
+     <h2>Other Users</h2>
+    <ion-list *ngIf="show">
+        <ion-item *ngFor="let i of other" (click)="showOtherDetails(i)">
+        {{ i.name }}
+        </ion-item>
+    </ion-list>
+</ion-content>
+-->
+
+
+<ion-header> 
+  <ion-navbar>        
+    <ion-title>Users</ion-title> 
+  </ion-navbar>  
+</ion-header> 
+<ion-content no-padding> 
+  <ion-item-group>
+    <ion-item-divider class="itm-divider-btom"><span class="txt-gold">Prime User</span></ion-item-divider>
+    <button ion-item class="itm" (click)="goToPrimeUserDetails()">
+      <h2>{{prim_user}}</h2>
+      <ion-icon item-right md="ios-arrow-forward"></ion-icon>
+    </button>       
+  </ion-item-group>
+
+
+  <ion-item-group *ngIf="show">
+    <ion-item-divider class="itm-divider-btom"><span class="txt-gold">Other Users</span></ion-item-divider>
+    <button ion-item class="itm" (click)="goToOtherUserDetails(i)" *ngFor="let i of json_obj.other_users">
+      <h2>{{i.name}}</h2>
+      <ion-icon item-right md="ios-arrow-forward"></ion-icon>
+    </button> 
+  </ion-item-group>
+
+
+  <ion-item-group *ngIf="showPending">
+    <ion-item-divider class="itm-divider-btom"><span class="txt-gold">Pending Users</span></ion-item-divider>
+    <button ion-item class="itm" *ngFor="let j of pending" (click)="goToPendingUserDetails(j)">
+      <h2>{{j.name}}</h2>
+      <ion-icon item-right md="ios-arrow-forward"></ion-icon>
+    </button> 
+  </ion-item-group>
+</ion-content>     
+

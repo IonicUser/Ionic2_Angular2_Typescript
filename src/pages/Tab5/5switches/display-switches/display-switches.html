@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Switchess</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content no-padding>
+  <ion-item-group>
+    <ion-item-divider class="itm-divider-btom">
+      <span class="txt-gold"> All Switches in {{ this.homeName}}</span>
+    </ion-item-divider>
+    <span *ngFor="let i of items">
+      <span *ngFor="let j of i.devices">
+          <span *ngFor="let k of j.switchappliances">
+             <button ion-item class="itm3" (click)="goToSwitchDetails(k,j.name,i.room_name,k.is_configured)">
+            <span *ngIf="!k.name">Unconfigured</span>
+             <span *ngIf="k.name!=''">{{k.name}}</span>  
+            
+            <br><span class="txt-orange txt-small"> {{i.room_name}}</span>
+             <ion-icon item-right md="ios-arrow-forward"></ion-icon>
+            </button>
+        </span>
+      </span>
+    </span>
+  </ion-item-group>
+</ion-content>

@@ -1,0 +1,97 @@
+
+/**
+ * 01/28/2016
+ * This pen is years old, and watching at the code after all
+ * those years made me fall from my chair, so I:
+ * - changed all IDs to classes
+ * - converted all units to pixels and em units
+ * - changed all global elements to classes or children of
+ *   .login
+ * - cleaned the syntax to be more consistent
+ * - added a lot of spaces that I so hard tried to avoid
+ *   a few years ago
+ *   (because it's cool to not use them)
+ * - and probably something else that I can't remember anymore
+ *
+ * I sticked to the same philosophy, meaning:
+ * - the design is almost the same
+ * - only pure HTML and CSS
+ * - no frameworks, preprocessors or resets
+ */
+
+/* 'Open Sans' font from Google Fonts */
+page-login{
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+@font-face {font-family: "Lucida Sans";
+    src: url("http://db.onlinewebfonts.com/t/b6aa2b12d843f986bfcbdb2274c494ce.eot"); /* IE9*/
+    src: url("http://db.onlinewebfonts.com/t/b6aa2b12d843f986bfcbdb2274c494ce.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("http://db.onlinewebfonts.com/t/b6aa2b12d843f986bfcbdb2274c494ce.woff2") format("woff2"), /* chrome firefox */
+    url("http://db.onlinewebfonts.com/t/b6aa2b12d843f986bfcbdb2274c494ce.woff") format("woff"), /* chrome firefox */
+    url("http://db.onlinewebfonts.com/t/b6aa2b12d843f986bfcbdb2274c494ce.ttf") format("truetype"), /* chrome firefox opera Safari, Android, iOS 4.2+*/
+    url("http://db.onlinewebfonts.com/t/b6aa2b12d843f986bfcbdb2274c494ce.svg#Lucida Sans") format("svg"); /* iOS 4.1- */
+}
+body{
+  font-family: "Lucida Sans";
+}
+.list > .item-block:first-child {
+  border-top: 0.55px solid #fff;
+  border-bottom:0;
+}
+
+.list > .item-block:last-child,
+.list > .item-wrapper:last-child .item-block {
+  border: 0.55px solid #fff;
+}
+ion-icon { font-size:2rem !important; }
+.item {  background:transparent;  color:#fff; }
+
+.item-inner{  margin-left:0 !important; }
+
+.item-md {font-size:1.2rem !important; }
+.list {   margin:0; }
+
+.txt_ff{  color:#fff; }
+
+a{ text-decoration:none; }
+.min-ht{
+  min-height:250px;
+}
+.br_top{
+  border-top:0;
+}
+
+.btn_ff{
+  color: #000;
+  background-color: #fff;
+}
+
+.btn_ff.activated {
+  background-color: #ccc;
+}
+.btn_fb{
+  color: #fff;
+  background-color: #2d4486;
+}
+
+.btn_fb.activated {
+  background-color: #213263;
+}
+
+.text-input::-moz-placeholder {
+  color: #fff;
+}
+
+.text-input:-ms-input-placeholder {
+  color: #fff;
+}
+
+.text-input::-webkit-input-placeholder {
+  text-indent: 0;
+  color: #fff;
+}
+
+}
+
+
+

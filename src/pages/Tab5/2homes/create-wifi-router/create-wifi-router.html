@@ -1,0 +1,22 @@
+<ion-header> 
+  <ion-navbar>        
+  <ion-title>Add Wifi Router </ion-title> 
+  </ion-navbar>  
+</ion-header> 
+<ion-content no-padding> 
+   <form (ngSubmit)="createWifiRouter()" #registerForm="ngForm"> 
+  <ion-item-group>
+    <ion-item-divider class="itm-divider-btom"><span class="txt-silver">Add Wifi Router Details</span></ion-item-divider>
+      <ion-item class="itm">
+        <ion-label>SSID</ion-label>
+        <ion-input type="text" item-right class="txt-normal" text-right [(ngModel)]="ssid"  [ngModelOptions]="{standalone: true}"></ion-input>
+      </ion-item> 
+      <ion-item class="itm">
+        <ion-label>Password</ion-label>
+        <ion-input type="text" item-right class="txt-normal"[(ngModel)]="pass"  [ngModelOptions]="{standalone: true}" text-right></ion-input>
+      </ion-item>    
+  </ion-item-group>
+  <p>&nbsp;</p> 
+  <button ion-button block no-margin><span class="txt-orange" type="submit" >Add Wifi Router</span> </button>
+   </form>
+</ion-content>     

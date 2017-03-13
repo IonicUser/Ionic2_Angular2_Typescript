@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Create Switchboard</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <form (ngSubmit)="registerSwitchBoard()" #registerForm="ngForm">
+    <ion-item-group>
+      <ion-item-divider class="itm-divider-btom"><span class="txt-silver">Create a new sboard</span></ion-item-divider>
+      <ion-item class="itm">
+        <ion-label>SwitchBoard Name</ion-label>
+        <ion-input type="text" item-right class="txt-normal" text-right [(ngModel)]="registerSwitchBoardCredentials.switchBoardName"
+          [ngModelOptions]="{standalone: true}" required></ion-input>
+      </ion-item>
+      <ion-item class="itm">
+        <ion-label>Device ID</ion-label>
+        <ion-input type="text" item-right class="txt-normal" text-right [(ngModel)]="registerSwitchBoardCredentials.device_id" [ngModelOptions]="{standalone: true}"
+          required></ion-input>
+      </ion-item>
+      <ion-item class="itm">
+        <ion-label>Switch Board Type</ion-label>
+        <ion-select [(ngModel)]="registerSwitchBoardCredentials.device_type" [ngModelOptions]="{standalone: true}">
+          <ion-option>4_node_switch</ion-option>
+          <ion-option>4_node_switch</ion-option>
+          <ion-option>4_node_switch</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item class="itm">
+        <ion-label>Sensor Type</ion-label>
+        <ion-select [(ngModel)]="registerSwitchBoardCredentials.sType" [ngModelOptions]="{standalone: true}">
+          <ion-option>ir</ion-option>
+          <ion-option>Non IR</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item class="itm">
+        <ion-label>Room Name</ion-label>
+        <ion-select [(ngModel)]="registerSwitchBoardCredentials.roomId" [ngModelOptions]="{standalone: true}">
+          <ion-option *ngFor="let name of roomArrayData" [value]="name._id">{{name.name}}</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-item-group>
+    <p>&nbsp;</p>
+    <button ion-button block no-margin><span class="txt-orange" type="submit">Create </span> </button>
+  </form>
+</ion-content>

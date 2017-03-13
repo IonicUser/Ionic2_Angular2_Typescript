@@ -1,0 +1,24 @@
+<ion-header> 
+  <ion-navbar>        
+  <ion-title>{{name}}</ion-title> 
+  </ion-navbar>  
+</ion-header> 
+<ion-content no-padding> 
+  <ion-item-group>
+    <ion-item-divider class="itm-divider-btom"><span class="txt-silver">User Details</span></ion-item-divider>
+      <ion-item class="itm">
+        <span>Name</span>
+        <span item-right class="txt-normal">{{name}}</span>
+      </ion-item> 
+      <ion-item class="itm">
+        <span>Email</span>
+        <span item-right class="txt-normal">{{email}}</span>
+      </ion-item> 
+            <ion-item class="itm">
+        <span>Mobile</span>
+        <span item-right class="txt-normal">{{phone}}</span>
+      </ion-item>              
+  </ion-item-group>
+
+ <button class="txt-red" ion-button block no-margin text-left (click)="deleteUser()">Delete User	</button>
+</ion-content>     

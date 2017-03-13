@@ -1,0 +1,77 @@
+<!--ion-header>  
+	<ion-navbar>         
+    <ion-title>Edit Home {{ home_dName }}</ion-title> 
+	</ion-navbar>  
+</ion-header>  
+<ion-content no-padding> 
+  <form (ngSubmit)="editHome()" #registerForm="ngForm">
+	<ion-item-group>
+		<ion-item-divider class="itm-divider"><span class="txt-silver">Edit Home Details</span></ion-item-divider>
+			<ion-item class="itm">
+				<ion-label>Display Name</ion-label>
+        <ion-input type="text" item-right class="txt-normal" text-right [(ngModel)]="home_dName" [ngModelOptions]="{standalone: true}" #myInput auto-focus></ion-input>
+			</ion-item>
+			<ion-item class="itm">
+				<ion-label>Home Name</ion-label>
+				<ion-input type="text" item-right class="txt-normal" text-right [(ngModel)]="home_name" [ngModelOptions]="{standalone: true}"></ion-input>
+			</ion-item>
+			<ion-item class="itm">
+				<ion-label>Geo Location </ion-label>
+				<span item-right *ngIf="grab" class="txt-orange">{{latlong[0]}},{{latlong[1]}}</span>
+					<button *ngIf="!grab" ion-button item-right class="txt-orange" text-right (click)="locate()" outline style="border-color:#ff9500"  >Grab</button>
+			</ion-item>					
+	</ion-item-group>
+	<ion-item-group>
+		<ion-item-divider class="itm-divider"> &nbsp; </ion-item-divider>
+	</ion-item-group>
+	<div *ngIf="notDefault">
+  <button class="txt-gold" ion-button block no-margin  (click)="makeDefaultHome()">Make it as Default Home</button>
+	<ion-item-group>
+		<ion-item-divider class="itm-divider"><span class="txt-normal">  This makes the {{ home_dName }} as default home <br></span> <br></ion-item-divider>
+	</ion-item-group></div>
+  <button class="txt-gold" ion-button block no-margin type="submit">Update Home	</button>
+	</form>
+</ion-content-->
+
+
+
+<ion-header>  
+	<ion-navbar>         
+		<ion-title>Create Home</ion-title> 
+	</ion-navbar>  
+</ion-header>  
+<ion-content no-padding> 
+  <!--form (ngSubmit)="editHome()" #registerForm="ngForm"--> 
+	<ion-item-group>
+		<ion-item-divider class="itm-divider"><span class="txt-silver">Create New Home</span></ion-item-divider>
+			<ion-item class="itm">
+				<ion-label>Home Name (Unique)</ion-label>
+				<ion-input type="text" [(ngModel)]="home_name"  [ngModelOptions]="{standalone: true}" required item-right class="txt-normal" text-right placeholder="Enter Display Name"></ion-input>
+			</ion-item>
+			<ion-item class="itm">
+				<ion-label>Display Name</ion-label>
+				<ion-input type="text"[(ngModel)]="home_dName"  [ngModelOptions]="{standalone: true}" required item-right class="txt-normal" text-right placeholder="Enter Home Name"></ion-input>
+			</ion-item>
+			<ion-item class="itm" *ngIf="show">
+				<ion-label>Make it default ?</ion-label>
+				<ion-toggle color="energized"  [(ngModel)]="def" [ngModelOptions]="{standalone: true}"></ion-toggle>
+			</ion-item>
+			<ion-item class="itm">
+				<ion-label>Geo Location </ion-label>
+				<span item-right *ngIf="grab" class="txt-orange">{{lat}},{{long}}</span>
+					<button *ngIf="!grab" ion-button item-right class="txt-orange" text-right (click)="locate()" outline style="border-color:#ff9500"  >Grab</button>
+			</ion-item>					
+	</ion-item-group>
+	<span item-right>Current home location:{{lat}},{{long}}</span>
+	<ion-item-group>
+		<ion-item-divider class="itm-divider"> &nbsp; </ion-item-divider>
+	</ion-item-group>
+		<div *ngIf="notDefault">
+  <button class="txt-gold" ion-button block no-margin [disabled]="defDisable" (click)="makeDefaultHome()">Make it as Default Home</button>
+	<ion-item-group>
+		<ion-item-divider class="itm-divider"><span class="txt-normal">  This makes the {{ home_dName }} as default home <br></span> <br></ion-item-divider>
+	</ion-item-group></div>
+	<button class="txt-gold" ion-button block no-margin (click)="editHome()">Update Home	</button>
+  <!--/form-->
+</ion-content>     
+

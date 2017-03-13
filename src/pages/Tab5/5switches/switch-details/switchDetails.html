@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Unconfigured</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+  <span>
+
+ <form (ngSubmit)="updateSwitch(switchModal)" #registerForm="ngForm">
+	<ion-item-group *ngIf="switchModal" >
+		<ion-item-divider class="itm-divider"><span class="txt-silver">Add Switch Details</span></ion-item-divider>
+  <ion-item class="itm">
+    <ion-label>Appliance Name</ion-label>
+    <ion-input type="text" placeholder="Enter Name" item-right class="txt-normal" text-right [(ngModel)]="switchModal.name" [ngModelOptions]="{standalone: true}"></ion-input>
+  </ion-item>
+  <ion-item class="itm">
+    <ion-label>Switch Type</ion-label>
+    <ion-input type="text" item-right class="txt-normal" text-right [(ngModel)]="switchModal.switch_type" [ngModelOptions]="{standalone: true}" readonly></ion-input>
+  </ion-item>
+  <ion-item class="itm">
+    <ion-label>Appliance Type</ion-label>
+    <ion-select placeholder="Select" [(ngModel)]="switchModal.appliance_type" [ngModelOptions]="{standalone: true}">
+      <ion-option>TV</ion-option>
+      <ion-option>FAN</ion-option>
+      <ion-option>STB</ion-option>
+      <ion-option>LIGHT</ion-option>
+    </ion-select>
+  </ion-item>
+
+ <ion-item class="itm">
+    <ion-label>Home</ion-label>
+    <ion-input type="text" item-right class="txt-normal" text-right [(ngModel)]="switchModal.home_type" [ngModelOptions]="{standalone: true}" readonly></ion-input>
+  </ion-item>
+
+   <ion-item class="itm">
+    <ion-label>Room</ion-label>
+    <ion-input type="text" item-right class="txt-normal" text-right [(ngModel)]="switchModal.room_type" [ngModelOptions]="{standalone: true}" readonly></ion-input>
+  </ion-item>
+   <ion-item class="itm">
+    <ion-label>Switchboard</ion-label>
+    <ion-input type="text" item-right class="txt-normal" text-right [(ngModel)]="switchModal.sboard_type" [ngModelOptions]="{standalone: true}" readonly></ion-input>
+  </ion-item>
+
+  </ion-item-group>
+  <ion-item-group>
+    <ion-item-divider class="itm-divider"> &nbsp; </ion-item-divider>
+  </ion-item-group>
+  <button class="txt-gold" ion-button block no-margin type="submit">Update Details	</button>
+  </form>
+  </span>
+</ion-content>

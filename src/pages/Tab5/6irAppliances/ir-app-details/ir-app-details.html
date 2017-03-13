@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{name}}</ion-title>
+    <ion-buttons end > 
+      <button ion-button class="txt-gold" (click)="goToEditIrApp()">Edit </button> 
+    </ion-buttons> 
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-item-group>
+    <ion-item-divider class="itm-divider-btom">
+      <span class="txt-silver">IR Appliance Details</span>
+    </ion-item-divider>
+    <ion-item class="itm">
+      <ion-label>Appliance Name</ion-label>
+      <span item-right class="txt-normal">{{name}}</span>
+    </ion-item> 
+    <ion-item class="itm">
+      <ion-label>Paired with Switchboard</ion-label>
+      <span item-right class="txt-normal">{{paired_sb}}</span>
+    </ion-item>
+    <ion-item class="itm">
+      <ion-label>Appliance Type</ion-label>
+      <span item-right class="txt-normal">{{type}}</span>
+    </ion-item>
+    <ion-item class="itm">
+      <ion-label>Brand</ion-label>
+      <span item-right class="txt-normal">{{brand}}</span>
+    </ion-item> 
+    <ion-item class="itm">
+      <ion-label>Home</ion-label>
+      <span item-right class="txt-normal">{{home_name}}</span>
+    </ion-item> 
+    <ion-item class="itm">
+      <ion-label>Room</ion-label>
+      <span item-right class="txt-normal">{{room_id}}</span>
+    </ion-item>    
+  </ion-item-group>
+  <br>  
+  <button class="btn" ion-button block no-margin>
+    <span class="txt-orange" >Configure IR Appliance</span> 
+  </button>
+  <p padding-left> In order to complete creation of an IR Appliance, you have to configure its remote.</p>
+  <button class="btn" ion-button block no-margin (click)="deleteIr()"><span class="txt-red" >Delete IR Appliance</span> </button>
+  
+</ion-content>
+
+

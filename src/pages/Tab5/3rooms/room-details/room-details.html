@@ -1,0 +1,23 @@
+<<ion-header>
+    <ion-navbar>
+        <ion-title>{{room.name}}</ion-title>
+        <ion-buttons end>
+        		<button class="txt-orange bg-none" (click)="goToEditRoom()">Edit</button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-item-group>
+    <ion-item-divider class="itm-divider-btom"><span class="txt-silver">Room Details</span></ion-item-divider>
+      <ion-item class="itm">
+        <span>Room Name</span>
+        <span item-right class="txt-normal">{{room.name}}</span>
+      </ion-item> 
+      <ion-item class="itm">
+        <span>Room Type</span>
+        <span item-right class="txt-normal">{{room.room_type}}</span>
+      </ion-item>    
+  </ion-item-group>
+  <p>&nbsp;</p>
+  <button class="btn" ion-button block no-margin><span class="txt-red" (click)="deleteRoom()">Delete Room</span> </button>
+</ion-content>

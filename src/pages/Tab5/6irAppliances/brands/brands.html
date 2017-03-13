@@ -1,0 +1,22 @@
+<ion-header>
+
+  <ion-navbar> 
+  </ion-navbar>
+
+</ion-header>
+
+    
+
+<ion-content>
+    <ion-searchbar
+        [showCancelButton]="shouldShowCancel"
+        (ionInput)="filterItems($event)"
+        placeholder="Search your Brand"
+        autocomplete="on" >
+    </ion-searchbar>
+    <ion-list [virtualScroll]="data2">
+      <button ion-item detail-push *virtualItem="let i" (click)="codeDisplay(i)" class="itm">
+      <span> {{ i }}</span>
+      </button>
+    </ion-list>
+</ion-content>

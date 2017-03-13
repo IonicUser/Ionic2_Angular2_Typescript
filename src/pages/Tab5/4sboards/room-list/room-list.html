@@ -1,0 +1,18 @@
+
+<ion-header> 
+  <ion-navbar>         
+    <ion-title>Rooms</ion-title> 
+  </ion-navbar>  
+</ion-header> 
+<ion-content no-padding> 
+  <ion-item-group>
+    <ion-item-divider class="itm-divider-btom">
+      <span class="txt-silver"> Registered rooms</span>
+    </ion-item-divider>
+      <button ion-item class="itm" *ngFor="let item of items" (click)="goNext(item)">
+        <span>{{ item.name }}</span>
+        <ion-icon item-right md="ios-arrow-forward"></ion-icon>
+      </button> 
+  </ion-item-group>
+  
+</ion-content>    

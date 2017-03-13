@@ -1,0 +1,73 @@
+
+ 
+<!--ion-content> 
+  <ion-list> 
+    <ion-item class="profile-dp">
+      <ion-avatar item-left>
+        <img src="http://www.laganmatrimonial.com/img/default-profile.png" class="img_br">
+      </ion-avatar>
+      <h2>Naresh Radharapu</h2> 
+      <p>9703651416</p>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <button ion-item  (click)="goTomyHomes()">
+      <ion-icon name="home" item-left></ion-icon>
+      <h2>My Homes</h2>
+      <ion-icon name="arrow-forward" item-right></ion-icon>
+    </button>
+    <button ion-item (click)="goTomyHomesForRooms()">
+      <ion-icon name="home" item-left></ion-icon>
+      <h2>My Rooms</h2>
+      <ion-icon name="arrow-forward" item-right></ion-icon>
+    </button>
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-icon name="home" item-left></ion-icon> 
+      <h2>My Appliances</h2>
+      <ion-icon name="arrow-forward" item-right></ion-icon>
+    </ion-item>
+    <ion-item>
+       <ion-avatar item-left>
+        <img src="assets/img/1.png">
+      </ion-avatar>  
+      <ion-icon name="home" item-left></ion-icon>
+      <h2>My Rooms</h2>
+      <ion-icon name="arrow-forward" item-right></ion-icon>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+      <button ion-item (click)="logout()"> <ion-icon name="log-out" item-left></ion-icon>Logout</button>   
+ 
+</ion-list>
+</ion-content-->
+
+
+<ion-header> 
+	<ion-navbar>        
+		<ion-title>Settings</ion-title> 
+	</ion-navbar>  
+</ion-header> 
+<ion-content no-padding> 
+	<ion-item-group>
+    <ion-item-divider class="itm-divider-btom"><span class="txt-gold">Profile Settings</span></ion-item-divider>
+      <button ion-item class="itm" (click)="goToDisplayProfile()">Profile<ion-icon item-right md="ios-arrow-forward"></ion-icon></button> 			
+	</ion-item-group>
+	<ion-item-group>
+		<ion-item-divider class="itm-divider-btom"><span class="txt-gold">Homes and Switches Configuration</span></ion-item-divider>
+      <button ion-item class="itm" (click)="goTomyHomes()">Homes<ion-icon item-right md="ios-arrow-forward"></ion-icon></button> 
+      <button ion-item class="itm" (click)="goTomyHomesForRooms()">Rooms<ion-icon item-right md="ios-arrow-forward"></ion-icon></button>
+			<button ion-item class="itm" (click)="goTomyHomesForSboards()">Switchboards<ion-icon item-right md="ios-arrow-forward"></ion-icon></button>
+			<button ion-item class="itm" (click)="goTomyHomesForSwitches()">Switches<ion-icon item-right md="ios-arrow-forward"></ion-icon></button>
+      <button ion-item class="itm"(click)="goToHomeListForIR()">IR Appliances<ion-icon item-right md="ios-arrow-forward"></ion-icon></button> 
+	</ion-item-group>
+	<ion-item-group>
+		<ion-item-divider class="itm-divider-btom"><span class="txt-gold">Other Settings</span></ion-item-divider>
+			<button ion-item class="itm">Settings<ion-icon item-right md="ios-arrow-forward"></ion-icon></button> 
+			<button ion-item class="itm">Tips<ion-icon item-right md="ios-arrow-forward"></ion-icon></button>
+			<button ion-item class="itm">About<ion-icon item-right md="ios-arrow-forward"></ion-icon></button>
+			<button ion-item class="itm">Notifications<ion-icon item-right md="ios-arrow-forward"></ion-icon></button>
+      <button ion-item class="itm" (click)="logout()">Logout</button> 
+	</ion-item-group>
+</ion-content>     

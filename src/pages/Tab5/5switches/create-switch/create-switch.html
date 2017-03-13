@@ -1,0 +1,39 @@
+<!--
+  Generated template for the CreateSwitch page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>createSwitch</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <form (ngSubmit)="createSw()" #registerForm="ngForm">
+    <ion-input [(ngModel)]="registerSw.sName"  [ngModelOptions]="{standalone: true}"
+    required type="text" placeholder="Name"></ion-input>
+    <ion-input [(ngModel)]="registerSw.sNum"  [ngModelOptions]="{standalone: true}"
+    required type="number" placeholder="Number"></ion-input>
+    <ion-item>
+      <ion-label>Switch Type</ion-label>
+        <ion-select [(ngModel)]="registerSw.sType" [ngModelOptions]="{standalone: true}">
+          <ion-option>toggle</ion-option>
+          <ion-option>regulator</ion-option>
+        </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Appliance Type</ion-label>
+        <ion-select [(ngModel)]="registerSw.appType" [ngModelOptions]="{standalone: true}">
+          <ion-option>fan</ion-option>
+          <ion-option>light</ion-option>
+          <ion-option>other</ion-option>
+        </ion-select>
+    </ion-item>
+    <button ion-button block type="submit">Create</button>
+  </form>
+</ion-content>

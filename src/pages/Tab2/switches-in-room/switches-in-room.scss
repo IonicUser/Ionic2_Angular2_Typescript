@@ -1,0 +1,130 @@
+page-switches-in-room {
+ion-list{
+	margin:0 !important;
+}
+ion-item{
+	background:transparent !important;
+	border-bottom:none !important;
+	padding-right:0 !important;
+}
+.item{
+	border:none !important;
+}
+ion-item .item-inner{
+	padding-right:0 !important;
+}
+ion-label{
+	margin:0 !important;
+}
+.bot_bdr{
+	
+	padding-bottom: 5px !important;
+}
+.btn_ml{margin-right:-30px;
+        height:24%;
+}
+.content{
+	color:#fff;
+}
+.hrscount{
+	text-align:center;
+}
+.kwhcount{
+	text-align:center;
+}
+.hrscount ,
+.kwhcount{
+	font-size:32px;
+	color:#fff;
+}
+.room{
+	color:#8e8e93;
+	font-size:18px;
+	padding: 6px 0 6px 0px !important;
+}
+.hrs{
+	color:#ff9500;
+}
+.kwh{
+	color:#ffcc00;
+}
+.hrs, .kwh, .remote, .setting {  
+	font-size:17px;
+	text-align:center; 
+	padding: 3px 0 2px 0px !important;
+}
+.remote, .setting{
+	color:#fff;
+	width: 18px;
+}
+.settings{
+	text-align:center;
+	padding-left:1rem; 
+}
+.bg_00{
+	background:#000;
+}
+.color_ff{
+	color:#fff;}
+.content_txt{
+	vertical-align:middle;
+}
+
+ .switch .roundC{
+    background: url(../assets/img/btn_test.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 1000px;
+    max-width: 77%;
+    background-position: center;
+    max-height: 160px;
+    padding-bottom: 0 !important;
+    height: 160px;
+   }
+.switch.active .roundC{
+	background:#F00;
+	background: url("../assets/img/OnPress.png");
+	background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 1000px;
+    max-width: 77%;
+    background-position: center;
+    max-height: 160px;
+    padding-bottom: 0 !important;
+    height: 160px;
+}   
+.switch{
+       max-height:160px;
+   }
+.roundC svg{
+	max-height: 160px;
+}
+.btn_icon{
+	background-image: url("../assets/img/iconoff.png");
+    padding-top: 170px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    max-width: 40%;
+    background-size: 30px;
+}
+.switch.active .btn_icon{
+	background-image: url("../assets/img/iconon.png");
+    padding-top: 170px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    max-width: 40%;
+    background-size: 30px;
+}
+
+
+
+
+}

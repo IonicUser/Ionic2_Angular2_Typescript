@@ -1,0 +1,30 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Rooms</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content no-padding>
+  <ion-item-group>
+
+    <div >
+        <span *ngFor="let room of userRoomsData">
+    <ion-item-divider class="itm-divider-btom">
+        <span class="txt-gold">Rooms in {{ room.name }}</span>
+    </ion-item-divider>
+          <span *ngFor="let roomDetails of room.rooms">
+          <button ion-item class="itm"  (click)="goToRoomDetails(roomDetails)">
+            <span>{{ roomDetails.name }}</span>
+          <ion-icon item-right md="ios-arrow-forward"></ion-icon>
+          </button>
+          </span>
+          <br>
+        </span>
+    </div>
+  </ion-item-group>
+  <!--ion-item-divider  *ngIf="!show" class="itm-divider"><span class="txt-gold">No registered rooms to show!</span></ion-item-divider-->
+  <ion-fab right bottom color="Red" class="fab1">
+    <button ion-fab (click)="goToCreateRoom();"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+
+</ion-content>

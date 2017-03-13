@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title *ngIf="switchboard">Edit {{switchboard.name}}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content *ngIf="switchboard">
+  <ion-item-group>
+    <ion-item-divider class="itm-divider-btom"><span class="txt-silver">edit Switchboard Details</span></ion-item-divider>
+    <ion-item class="itm">
+      <ion-label>Switch Board Name</ion-label>
+      <ion-input type="text" item-right class="txt-normal" text-right [(ngModel)]="switchBoardDetailsData.name" [ngModelOptions]="{standalone: true}"></ion-input>
+    </ion-item>
+    <!--<ion-item class="itm">
+    <ion-label>Room Name</ion-label>
+    <ion-select [(ngModel)]="switchBoardDetailsData.room_type"  [ngModelOptions]="{standalone: true}" >
+      <ion-option *ngFor="let name of roomArrayData" [value]="name.name"   >{{name.name}}</ion-option>
+    </ion-select>
+  </ion-item>-->
+    <ion-item class="itm">
+      <ion-label>Room Name</ion-label>
+      <ion-input type="text" item-right class="txt-normal" text-right [(ngModel)]="switchBoardDetailsData.room_type" [ngModelOptions]="{standalone: true}"
+        readonly></ion-input>
+    </ion-item>
+    <ion-item class="itm">
+      <ion-label>Switch Board Type</ion-label>
+      <ion-input type="text" item-right class="txt-normal" text-right [(ngModel)]="switchBoardDetailsData.device_type" [ngModelOptions]="{standalone: true}"
+        readonly></ion-input>
+    </ion-item>
+    <ion-item class="itm">
+      <ion-label>Device ID</ion-label>
+      <ion-input type="text" item-right class="txt-normal" text-right [(ngModel)]="switchBoardDetailsData.device_id" [ngModelOptions]="{standalone: true}"
+        readonly></ion-input>
+    </ion-item>
+  </ion-item-group>
+  <p>&nbsp;</p>
+  <button *ngIf="switchboard" class="btn" ion-button block no-margin><span class="txt-orange" (click)="updateSwitchBoard(switchBoardDetailsData)">Update Details</span> </button>
+</ion-content>

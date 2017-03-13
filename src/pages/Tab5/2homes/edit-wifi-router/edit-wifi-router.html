@@ -1,0 +1,22 @@
+<ion-header> 
+  <ion-navbar>        
+  <ion-title>Edit Wifi Router </ion-title> 
+  </ion-navbar>  
+</ion-header> 
+<ion-content no-padding> 
+   <form (ngSubmit)="editWifiRouter()" #registerForm="ngForm"> 
+  <ion-item-group>
+    <ion-item-divider class="itm-divider-btom"><span class="txt-silver">Update Wifi Router Details</span></ion-item-divider>
+      <ion-item class="itm">
+        <span>SSID Name</span>
+        <span item-right class="txt-normal">{{ssid}}</span>
+      </ion-item>
+      <ion-item class="itm">
+        <ion-label>Password</ion-label>
+        <ion-input type="text" item-right class="txt-normal"[(ngModel)]="pass"  [ngModelOptions]="{standalone: true}" text-right></ion-input>
+      </ion-item>    
+  </ion-item-group>
+  <p>&nbsp;</p> 
+  <button ion-button block no-margin><span class="txt-orange" type="submit" >Update Wifi Router</span> </button>
+   </form>
+</ion-content>     

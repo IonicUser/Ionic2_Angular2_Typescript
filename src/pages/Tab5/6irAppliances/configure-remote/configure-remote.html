@@ -1,0 +1,32 @@
+<ion-header>  
+	<ion-navbar>         
+		<ion-title>Remote</ion-title> 
+	</ion-navbar>  
+</ion-header>  
+<ion-content no-padding> 
+  <!--form (ngSubmit)="editHome()" #registerForm="ngForm"--> 
+	<ion-item-group>
+		<ion-item-divider class="itm-divider"><span class="txt-silver">Configure Remote</span></ion-item-divider>
+			<ion-item class="itm">
+				<ion-label>Brand</ion-label>
+        <button  ion-button icon-right *ngIf="select" item-right class="txt-orange" text-right (click)="deleteBrand()" outline style="border-color:#ff9500">{{brand}}
+          <ion-icon name="close" style="color:#ff9500"></ion-icon>
+        </button>
+					<button  ion-button *ngIf="!select" item-right class="txt-orange" text-right (click)="goToBrandsPage()" outline style="border-color:#ff9500">Select</button>
+			</ion-item>
+      <ion-item class="itm">
+				<ion-label>CodeSet</ion-label>
+        <button  ion-button icon-right *ngIf="selectCode" item-right class="txt-orange" text-right (click)="deleteBrand()" outline style="border-color:#ff9500">{{brand}}
+          <ion-icon name="close" style="color:#ff9500"></ion-icon>
+        </button>
+					<button  ion-button *ngIf="!selectCode" [disabled]="disCode" item-right class="txt-orange" text-right (click)="goToSetUpRemote()" outline style="border-color:#ff9500">Select</button>
+			</ion-item>
+						
+	</ion-item-group>
+	<ion-item-group>
+		<ion-item-divider class="itm-divider"> &nbsp; </ion-item-divider>
+	</ion-item-group>
+	<button class="txt-gold" ion-button block no-margin [disabled]="dis" (click)="SET()">Configure and Save Remote</button>
+  <!--/form-->
+</ion-content>     
+

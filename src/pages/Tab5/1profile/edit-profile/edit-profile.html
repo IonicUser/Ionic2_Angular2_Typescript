@@ -1,0 +1,25 @@
+<ion-header> 
+	<ion-navbar>         
+		<ion-title>Edit Profile</ion-title> 
+	</ion-navbar>  
+</ion-header> 
+<ion-content no-padding> 
+	<ion-item-group>
+		<ion-item-divider class="itm-divider">Edit and modify profile details</ion-item-divider>
+			<ion-item class="itm">
+				<ion-label>Name</ion-label>
+				<ion-input type="text" item-right class="txt-normal" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" text-right placeholder="Enter Name"></ion-input>
+			</ion-item>
+      <ion-item class="itm">
+				<ion-label>Gender</ion-label>
+          <ion-select [(ngModel)]="gender" [ngModelOptions]="{standalone: true}">
+          <ion-option value="male">Male</ion-option>
+          <ion-option value="female">Female</ion-option>
+        </ion-select>
+      </ion-item> 			
+	</ion-item-group>
+	<ion-item-group>
+		<ion-item-divider class="itm-divider"> &nbsp; </ion-item-divider>
+    <ion-item class="itm" text-center> <span class="txt-gold" (click)="updateProfile()">Update Profile</span></ion-item>
+	</ion-item-group>
+</ion-content>     

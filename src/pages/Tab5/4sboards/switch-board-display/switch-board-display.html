@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title *ngIf="switchBoardDetailsData">{{ switchBoardDetailsData.name}}</ion-title>
+    <ion-buttons end>
+      <button class="txt-orange bg-none" (click)="goToEditSwitchBoard()">Edit</button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content *ngIf="switchBoardDetailsData">
+  <ion-item-group>
+    <ion-item-divider class="itm-divider-btom">
+      <span class="txt-silver">Switch Board details</span>
+    </ion-item-divider>
+    <ion-item class="itm">
+      <ion-label>Switch Board Name</ion-label>
+      <span item-right class="txt-normal">{{switchBoardDetailsData.name}}</span>
+    </ion-item>
+    <ion-item class="itm">
+      <ion-label>Switch Board Type</ion-label>
+      <span item-right class="txt-normal">{{switchBoardDetailsData.device_type}}</span>
+    </ion-item>
+    <ion-item class="itm">
+      <ion-label>Home</ion-label>
+      <span item-right class="txt-normal">{{switchBoardDetailsData.home_type}}</span>
+    </ion-item>
+    <ion-item class="itm">
+      <ion-label>Room</ion-label>
+      <span item-right class="txt-normal">{{switchBoardDetailsData.room_type}}</span>
+    </ion-item>
+    <ion-item class="itm">
+      <ion-label>Device ID</ion-label>
+      <span item-right class="txt-normal">{{switchBoardDetailsData.device_id}}</span>
+    </ion-item>
+  </ion-item-group>
+  <p>&nbsp;</p>
+  <button class="btn" ion-button block no-margin><span class="txt-orange" (click)="configureSwitchBoard()">Configure Switch Board</span> </button>
+  <ion-item-divider class="itm-divider bdr-btom-none">
+    <span class="txt-normal">When you click on it you can configure switch board settins</span>
+  </ion-item-divider>
+  <button class="btn" ion-button block no-margin><span class="txt-red" (click)="deleteSwitchBoard()">Delete Switch Board</span> </button>
+</ion-content>

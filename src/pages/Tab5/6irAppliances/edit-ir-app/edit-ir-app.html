@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Edit {{name}}</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-item-group>
+    <ion-item-divider class="itm-divider-btom">
+      <span class="txt-silver">Edit IR Appliance</span>
+    </ion-item-divider>
+      <ion-item class="itm">
+        <ion-label>IR Appliance Name</ion-label>
+        <ion-input type="text" item-right class="txt-normal" required text-right [(ngModel)]="name"  [ngModelOptions]="{standalone: true}"></ion-input>
+      </ion-item> 
+      <ion-item  class="itm">
+        <ion-label>Room</ion-label>
+        <ion-select [(ngModel)]="room"(ngModelChange)="onRoomChange()">
+          <ion-option *ngFor="let item of items" [selected]="item.selected" [value]="item.room_id">{{item.room_name}}</ion-option>
+        </ion-select>
+      </ion-item> 
+      <ion-item  class="itm">
+        <ion-label>Switch Board</ion-label>
+        <ion-select [(ngModel)]="sb_id" [disabled]="disSb">
+          <ion-option *ngFor="let item of sb" [selected]="item.selected" [value]="item._id">{{item.name}}</ion-option>
+        </ion-select>
+      </ion-item>   
+  </ion-item-group>
+  <p>&nbsp;</p> 
+  <button ion-button block no-margin (click)="updateIrApp()"><span class="txt-orange" >Update IR Appliance</span> </button>
+  
+</ion-content>

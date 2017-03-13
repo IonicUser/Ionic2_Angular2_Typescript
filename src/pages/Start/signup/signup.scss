@@ -1,0 +1,84 @@
+page-signup {
+
+
+
+
+//@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+
+//body{
+  //font-family: "Lucida Sans";
+//}
+
+ion-list .item{
+  background:none;
+}
+
+ion-label{
+  color:#33373d !important;
+  text-transform: uppercase !important;
+  font-size:1.1rem !important;
+}
+
+.list > .item-block:first-child {
+  border-top: 0.55px solid #ebebeb !important;
+  border-bottom:0 !important;
+}
+
+.list > .item-block:last-child,
+.list > .item-wrapper:last-child .item-block {
+  border-top: 0.55px solid #ebebeb !important;
+}
+.list > .item-block:last-child, .list > .item-wrapper:last-child .item-block{
+  border-bottom: 0.55px solid #ebebeb !important;
+}
+.item-inner:last-child{
+  border-bottom: 0.55px solid #ebebeb !important;
+}
+.item-inner{
+  border-bottom: 0.55px solid #ebebeb !important;
+}
+.text-input::-moz-placeholder {
+  color: #a2acb1;  
+  font-size:1.4rem !important;
+}
+
+.text-input:-ms-input-placeholder {
+  color: #a2acb1;
+  font-size:1.4rem !important;
+}
+
+.text-input::-webkit-input-placeholder {
+  text-indent: 0;
+  color: #a2acb1;
+  font-size:1.4rem !important;
+}
+
+.btn_gr{
+  color: #fff;
+  background-color: #099e44;
+}
+
+.btn_gr.activated {
+  color: #3ab169;
+  background-color: #099e44;
+}
+.txt_div{
+  border-bottom: none !important;
+}
+.txt_div ion-label{
+  color:#89959b !important;
+  text-transform: none !important;
+  font-size:1.4rem !important;
+  
+}
+
+.txt_terms{
+  color: #797979;
+  font-size:1.4rem !important;
+}
+.txt_terms1{
+  color: #89959b;
+  font-size:1.2rem !important;
+}
+}

@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title> Configure</ion-title>
+    <!--<ion-buttons end >
+    <button class="txt-orange bg-none" (click)="goToEditSwitchBoard()">Edit</button>
+    </ion-buttons>-->
+  </ion-navbar>
+</ion-header>
+<ion-content *ngIf="switchBoardDetailsData.is_configured">
+  <ion-item-group>
+    <ion-item-divider class="itm-divider-btom">
+      <span ><p>To configure Switchboard goto Phone Settings >> Wifi >>and select network name that 
+        start with KIOT354435 and connect back to the same page</p></span>
+      </ion-item-divider> <br>
+           <ion-item-divider class="itm-divider-btom"><span class="txt-gold">Select wifi Router to which you want to connect</span></ion-item-divider>  
+    <ion-item class="itm">      
+      <ion-label>Select Wifi Router</ion-label>
+      <ion-select >
+        <ion-option>Pretty Home</ion-option>
+        <ion-option>KIOT</ion-option>
+        <ion-option>My Home</ion-option>
+      </ion-select>
+    </ion-item>
+
+
+  </ion-item-group>
+  <p>&nbsp;</p>
+  
+</ion-content>

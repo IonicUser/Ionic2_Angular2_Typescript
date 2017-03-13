@@ -1,0 +1,25 @@
+<!--
+  Generated template for the IrList page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>irList</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-row style="flex-wrap:wrap" class="row-grid">
+      <ion-col width-33 *ngFor="let i of data; let ind = index" >
+       <button ion-button block (click)="gotoIRApp(i.type);" class="btn-grid">
+           <div class="ico">{{ind}}</div>
+           {{ i.type }}
+       </button>
+      </ion-col>
+    </ion-row>
+</ion-content>

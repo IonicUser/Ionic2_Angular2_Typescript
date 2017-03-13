@@ -1,0 +1,72 @@
+<!--ion-header>
+  <ion-navbar>
+    <ion-title>
+      Home Registration
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h1>List of Homes</h1>
+  
+  <ion-list *ngFor="let item of items">
+      <ion-item-sliding *ngIf="show">
+      <button ion-item detail-push (click)="getUserHomes(item)">
+          {{item.display_name}}
+      </button>
+      <ion-item-options side="right">
+      <button ion-button color="primary" (click)="editHome(item)">
+        <ion-icon name="ion-edit"></ion-icon>
+        Edit
+      </button>
+      <button ion-button color="danger">
+        <ion-icon name="ios-trash"></ion-icon>
+        Delete
+      </button>
+    </ion-item-options>
+    </ion-item-sliding>
+    </ion-list>
+    <div  *ngIf="!show">
+     <ion-list *ngFor="let item of items">
+      
+      <button ion-item detail-push (click)="getRooms(item)">
+          {{item.display_name}}
+      </button>
+     </ion-list>
+    </div-->
+  
+  
+  <!--form (ngSubmit)="registerHome()" #registerForm="ngForm">
+    <ion-input [(ngModel)]="registerCredentials.homeName"  [ngModelOptions]="{standalone: true}" 
+    required type="text" placeholder="HomeName" (change)="checkNameAvailablitiy()"></ion-input>
+    <span *ngIf = "showError"> Home name already exists, try another </span>
+    <ion-input [(ngModel)]="registerCredentials.displayName"  [ngModelOptions]="{standalone: true}" 
+    required type="text" placeholder="Display Name"></ion-input>
+    <button ion-button block type="submit" value="Log in">Submit</button>
+  </form-->
+  <!--ion-fab right bottom *ngIf="show">
+       <button ion-fab (click)="showPrompt();"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+</ion-content-->
+<ion-header> 
+	<ion-navbar>         
+		<ion-title>Homes</ion-title> 
+	</ion-navbar>  
+</ion-header> 
+<ion-content no-padding> 
+	<ion-item-group *ngIf="show">
+    <ion-item-divider class="itm-divider"><span class="txt-gold">All your registered homes</span></ion-item-divider>
+			
+      <button ion-item class="itm" *ngFor="let item of homes" (click)="homeDetails(item)"><span>{{item.display_name}}</span>
+			<span item-right class="txt-normal" *ngIf="item.isDefault"> Default </span>
+			</button>
+	</ion-item-group>
+   <ion-fab right bottom  color="Red" class="fab1">
+       <button ion-fab  (click)="goToCreateHome();"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+  <ion-fab left bottom  color="Red" class="fab1">
+       <button ion-fab  (click)="goToJoinHome();"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+  <ion-item-divider  *ngIf="!show" class="itm-divider"><span class="txt-gold">No registered homes to show!</span></ion-item-divider>
+
+</ion-content>     

@@ -1,0 +1,22 @@
+<ion-header> 
+  <ion-navbar>        
+  <ion-title>Wifi Router Details</ion-title> 
+  </ion-navbar>  
+</ion-header> 
+<ion-content no-padding> 
+  <ion-item-group>
+    <ion-item-divider class="itm-divider-btom"><span class="txt-silver">Wifi Router Details</span></ion-item-divider>
+      <ion-item class="itm">
+        <span>SSID Name</span>
+        <span item-right class="txt-normal">{{ssid}}</span>
+      </ion-item> 
+      <ion-item class="itm">
+        <span>Password</span>
+        <span item-right class="txt-normal">{{pass}}</span>
+      </ion-item>    
+  </ion-item-group>
+  <p>&nbsp;</p>
+  <button class="btn" ion-button block no-margin><span class="txt-orange" (click)="goToEditRouter()">Edit Router</span> </button>
+  <p>&nbsp;</p>
+  <button class="btn" ion-button block no-margin><span class="txt-red" (click)="deleteRouter()">Delete Router</span> </button>
+</ion-content>     

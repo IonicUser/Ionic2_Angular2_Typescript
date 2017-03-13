@@ -1,0 +1,97 @@
+<!--
+  Generated template for the Login page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+
+
+
+<ion-content  class="content1">
+  
+<div class="login1">
+  <form class="login-container">
+        <button ion-button item-right icon-left block style="background: #3b5998;padding:15px;margin-top:15px;">
+        <ion-icon name="logo-facebook"></ion-icon>Signup via Facebook
+    </button><hr>
+    <button ion-button item-right icon-left block style="background: #d34836;padding:15px;margin-top:15px;">
+        <ion-icon name="logo-googleplus"></ion-icon>Signup via Google
+    </button>
+  </form>
+</div>
+<div class="login">
+  <div class="login-triangle"></div>
+  
+  <h3 class="login-header">Signup with Email</h3>
+
+  <form class="login-container" (ngSubmit)="signupp()" #registerForm="ngForm">
+    <ion-input [(ngModel)]="registerCredentials1.name"  [ngModelOptions]="{standalone: true}" required type="text" placeholder="Name"></ion-input>
+    <ion-input [(ngModel)]="registerCredentials1.email"  [ngModelOptions]="{standalone: true}" required type="email" placeholder="Email"></ion-input>
+    <ion-input [(ngModel)]="registerCredentials1.pass"  [ngModelOptions]="{standalone: true}" required type="password" placeholder="Password"></ion-input>
+    <ion-input [(ngModel)]="registerCredentials1.pass1"  [ngModelOptions]="{standalone: true}" required type="password" placeholder="Repeat Password"></ion-input>
+    <ion-input [(ngModel)]="registerCredentials1.num"  [ngModelOptions]="{standalone: true}" required type="number" placeholder="Phone"></ion-input>
+    <button ion-button block type="submit" value="sign up">Sign up</button>
+  </form>
+</div>
+
+
+</ion-content>
+-->
+
+
+
+
+
+
+<ion-header>
+  <ion-navbar>   
+    <ion-title>Sign up</ion-title>
+  </ion-navbar> 
+</ion-header>
+
+<ion-content style="background:#edf1f4; "> 
+     
+  <form #registerForm="ngForm"(ngSubmit)="signupp()"> 
+    <ion-list>  
+      <ion-item-divider color="light" class="txt_div">Sign up using email</ion-item-divider>
+      <ion-item>    
+        <ion-label stacked >Name</ion-label>
+        <ion-input type="text" placeholder="required"  [(ngModel)]="registerCredentials1.name"  [ngModelOptions]="{standalone: true}"required ></ion-input>
+      </ion-item>
+ 
+      <ion-item>   
+        <ion-label stacked >Email</ion-label>
+        <ion-input type="text"  placeholder="required"[(ngModel)]="registerCredentials1.email"  [ngModelOptions]="{standalone: true}" required></ion-input>
+      </ion-item>
+      <ion-item>   
+        <ion-label stacked >Password</ion-label>
+        <ion-input type="password" placeholder="required"[(ngModel)]="registerCredentials1.pass"  [ngModelOptions]="{standalone: true} "required ></ion-input>
+      </ion-item>
+      <ion-item>   
+        <ion-label stacked>Repeat Password</ion-label>
+        <ion-input type="password" placeholder="required"  [(ngModel)]="registerCredentials1.pass1"  [ngModelOptions]="{standalone: true}" required></ion-input>
+      </ion-item> 
+      <ion-item>   
+        <ion-label stacked >Mobile No</ion-label>
+        <ion-input type="text" placeholder="required" [(ngModel)]="registerCredentials1.num"  [ngModelOptions]="{standalone: true}" required></ion-input>
+      </ion-item> 
+      <br/>
+      <ion-item class="txt_div">
+        <ion-label>Send me occasional email updates</ion-label>
+        <ion-checkbox color="dark" ></ion-checkbox>
+      </ion-item>
+      <ion-row>
+        <ion-col padding>
+          <button ion-button class="btn_gr" type="submit" block>Sign up</button>
+        </ion-col>
+      </ion-row>
+        <a (click)="goBack()"><p class="txt_terms" text-center>Already a member? Log in</p></a>
+
+    </ion-list>    
+    <p>&nbsp;</p>
+    <p text-center padding class="txt_terms1">
+      By creating an account, you agree to KIOT's <u>Terms of Service</u>, <u>Privacy Policy</u>, <u>Cookie Policy</u> and <u>Content Policies</u>. 
+    </p>
+    
+  </form>
+
+</ion-content>

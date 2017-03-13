@@ -1,0 +1,52 @@
+<ion-header>  
+	<ion-navbar>         
+    <ion-title>{{home_dName}}</ion-title> 
+    <ion-buttons end >
+    <button class="txt-orange bg-none" (click)="goToEditHome()">Edit</button>
+    </ion-buttons>
+	</ion-navbar>  
+</ion-header>  
+<ion-content no-padding> 
+	<ion-item-group>
+		<ion-item-divider class="itm-divider"><span class="btom txt-silver">Home Details</span></ion-item-divider>
+			<ion-item class="itm">
+				<span>Display Name</span>
+        <span item-right class="txt-normal">{{home_dName}}</span>
+      </ion-item>
+			<ion-item class="itm">
+				<span>Home Name</span>
+        <span item-right class="txt-normal">{{home_name}}</span>
+			</ion-item>
+			<!-- <ion-item class="itm">
+				<ion-label>Home Password</ion-label>
+				<span item-right class="txt-normal">Home1</span>
+			</ion-item> -->
+			<ion-item class="itm">
+				<span>Default Home</span>
+				<span item-right class="txt-normal">{{def}}</span>
+			</ion-item>
+			<ion-item class="itm">
+				<span>Geo Location </span>
+				<span item-right class="txt-gold">{{lat}},{{long}}</span>
+			</ion-item>					
+	</ion-item-group>
+	<ion-item-group>
+		<ion-item-divider class="itm-divider"> &nbsp; </ion-item-divider>
+	</ion-item-group>
+	<button class="txt-orange"(click)="goToHomeUsers()" ion-button block no-margin text-left>Users</button>
+	<ion-item-group>
+		<ion-item-divider class="itm-divider"><span class="txt-normal">  When you click on it, you can view all users in your home and also you can approve pending users. <br></span> <br></ion-item-divider>
+	</ion-item-group>
+	<button class="txt-orange" ion-button block no-margin text-left (click)="goToWifiRouters()">Wifi Routers	</button>
+	<ion-item-group>
+		<ion-item-divider class="itm-divider"><span class="txt-normal">  When you click on it, you can view all wifi routers in your home and also you can add new wifi router.<br></span><br></ion-item-divider>
+	</ion-item-group>
+	<button class="txt-orange" ion-button block no-margin text-left>Enter Home	</button><ion-item-group>
+		<ion-item-divider class="itm-divider"><span class="txt-normal">  When you click on it, you can enter into your home and control all your appliances. <br></span><br></ion-item-divider>
+	</ion-item-group>
+	<button class="txt-red" ion-button block no-margin text-left (click)="deleteHome()">Delete Home	</button>
+
+	<p>&nbsp;</p>
+
+</ion-content>     
+

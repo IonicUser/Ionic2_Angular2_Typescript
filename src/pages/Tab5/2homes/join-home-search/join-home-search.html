@@ -1,0 +1,30 @@
+<ion-header> 
+  <ion-navbar>         
+    <ion-title>Join Home</ion-title> 
+  </ion-navbar>  
+</ion-header> 
+<ion-content no-padding> 
+  <ion-item-group>
+    <ion-item-divider class="itm-divider-btom">
+      <span class="txt-silver"> Enter Home name to send join request</span>
+    </ion-item-divider>
+    <ion-searchbar [(ngModel)]="searchStr"></ion-searchbar> 
+  </ion-item-group>
+  <br> 
+  <button ion-button block no-margin><span class="txt-orange" (click)="search(searchStr)">Submit</span> </button>
+  <br><br>
+  <div  *ngIf="show">
+  <ion-item-group>
+    <ion-item-divider class="itm-divider-btom"><span class="txt-silver">Home and prime User Details</span></ion-item-divider>
+      <ion-item class="itm">
+        <span>{{home}}</span>
+        <span item-right class="txt-normal">{{user}}</span>
+      </ion-item>          
+  </ion-item-group>
+<br>
+  <button ion-button block no-margin><span class="txt-orange" (click)="sendJoinRequest()">Send Join Request</span> </button>
+  </div>
+   <ion-item-divider class="itm-divider-btom" *ngIf="showNotFound">
+      <span class="txt-silver"> Home not found</span>
+    </ion-item-divider>
+</ion-content>  

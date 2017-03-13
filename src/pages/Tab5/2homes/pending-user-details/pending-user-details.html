@@ -1,0 +1,27 @@
+<ion-header> 
+  <ion-navbar>        
+  <ion-title>{{name}}</ion-title> 
+  </ion-navbar>  
+</ion-header> 
+<ion-content no-padding> 
+  <ion-item-group>
+    <ion-item-divider class="itm-divider-btom"><span class="txt-silver">User Details</span></ion-item-divider>
+      <ion-item class="itm">
+        <span>Name</span>
+        <span item-right class="txt-normal">{{name}}</span>
+      </ion-item> 
+      <ion-item class="itm">
+        <span>Mobile</span>
+        <span item-right class="txt-normal">{{phone}}</span>
+      </ion-item>              
+  </ion-item-group>
+  <!--ion-item-group>
+    <ion-item-divider class="itm-divider"> &nbsp; </ion-item-divider>
+    <ion-item class="itm">
+    <ion-label> <span class="txt-orange" (click)="approve('confirm')">Approve Request</span> </ion-label>
+      <ion-toggle checked="true"></ion-toggle>
+    </ion-item>
+  </ion-item-group-->
+  <button class="btn" ion-button block no-margin><span class="txt-orange" (click)="approve('confirm')">Approve User</span> </button>
+  <button class="btn" ion-button block no-margin><span class="txt-red" (click)="approve('deleted')">Delete User</span> </button>
+</ion-content>     

@@ -1,0 +1,34 @@
+<ion-header> 
+	<ion-navbar>        
+		<ion-title>Profile</ion-title> 
+		  <ion-buttons end >
+    <button class="txt-orange bg-none" (click)="goToEditProfile()">Edit</button>
+    </ion-buttons>
+	</ion-navbar>  
+</ion-header> 
+<ion-content no-padding> 
+	<ion-item-group>
+		<ion-item-divider class="itm-divider">Your Profile Details</ion-item-divider>
+			<ion-item class="itm">
+				<span>Name</span>
+        <span item-right class="txt-normal">{{username}}</span>
+      </ion-item> 
+      <ion-item class="itm">
+				<span>Mobile</span>
+        <span item-right class="txt-normal">{{mobile}}</span>
+      </ion-item> 
+      <ion-item class="itm">
+				<span>Email</span>
+        <span item-right class="txt-normal">{{email}}</span>
+      </ion-item> 
+      <ion-item class="itm">
+				<span>Gender</span>
+        <span item-right class="txt-normal">{{gender}}</span>
+      </ion-item> 			
+	</ion-item-group>
+	<ion-item-group>
+		<ion-item-divider class="itm-divider"> &nbsp; </ion-item-divider>
+    <ion-item class="itm"> <span class="txt-gold" (click)="goToChangePassword()">Change Password	</span></ion-item>
+	</ion-item-group>
+	
+</ion-content>     

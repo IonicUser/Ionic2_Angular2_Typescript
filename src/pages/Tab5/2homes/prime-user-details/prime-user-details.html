@@ -1,0 +1,26 @@
+<ion-header> 
+  <ion-navbar>        
+  <ion-title>{{home.prim_user.name}}</ion-title> 
+  </ion-navbar>  
+</ion-header> 
+<ion-content no-padding> 
+  <ion-item-group>
+    <ion-item-divider class="itm-divider-btom"><span class="txt-silver">Prime User Details</span></ion-item-divider>
+      <ion-item class="itm">
+        <span>Name</span>
+        <span item-right class="txt-normal">{{home.prim_user.name}}</span>
+      </ion-item> 
+      <ion-item class="itm">
+        <span>Email</span>
+        <span item-right class="txt-normal">{{home.prim_user.email}}</span>
+      </ion-item>
+      <ion-item class="itm">
+        <span>Mobile</span>
+        <span item-right class="txt-normal">{{home.prim_user.phone}}</span>
+      </ion-item>        
+      <ion-item class="itm">
+        <span>Gender</span>
+        <span item-right class="txt-normal">{{home.prim_user.gender}}</span>
+      </ion-item>       
+  </ion-item-group>
+</ion-content>

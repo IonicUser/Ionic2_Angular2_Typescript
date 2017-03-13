@@ -1,0 +1,68 @@
+<!--ion-header>
+  <ion-navbar>
+    <ion-title>
+      Room Registration
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form (ngSubmit)="registerRoom()" #registerForm="ngForm">
+    <ion-input [(ngModel)]="registerRoomCredentials.roomName"  [ngModelOptions]="{standalone: true}"
+    required type="text" placeholder="Room Name"></ion-input>
+    <ion-item>
+      <ion-label>Room Type</ion-label>
+        <ion-select [(ngModel)]="registerRoomCredentials.roomType" [ngModelOptions]="{standalone: true}">
+          <ion-option>kitchen</ion-option>
+          <ion-option>bathroom</ion-option>
+          <ion-option>bedroom</ion-option>
+          <ion-option>hall</ion-option>
+          <ion-option>livingroom</ion-option>
+          <ion-option>sittingroom</ion-option>
+          <ion-option>study</ion-option>
+          <ion-option>other</ion-option>
+        </ion-select>
+    </ion-item>
+    <button ion-button block type="submit" value="Log in">Submit</button>
+  </form>
+  
+</ion-content-->
+
+<ion-header>
+    <ion-navbar>
+        <ion-title>Create Room</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+  <form (ngSubmit)="registerRoom()" #registerForm="ngForm">
+  <ion-item-group>
+    <ion-item-divider class="itm-divider-btom"><span class="txt-silver">Create a new room</span></ion-item-divider>
+    <ion-item class="itm">
+        <ion-label>Select Home</ion-label>
+        <ion-select  [(ngModel)]="home_id" [ngModelOptions]="{standalone: true}">
+          <ion-option *ngFor="let i of items" [selected]="i.selected" [value]="i._id">{{ i.display_name }}</ion-option>      
+        </ion-select>
+      </ion-item >  
+      <ion-item class="itm">
+        <ion-label>Room Name</ion-label>
+        <ion-input type="text" item-right class="txt-normal" text-right [(ngModel)]="registerRoomCredentials.roomName"  [ngModelOptions]="{standalone: true}"
+    required></ion-input>
+      </ion-item> 
+      <ion-item class="itm">
+        <ion-label>Room Type</ion-label>
+        <ion-select [(ngModel)]="registerRoomCredentials.roomType" [ngModelOptions]="{standalone: true}">
+          <ion-option>kitchen</ion-option>
+          <ion-option>bathroom</ion-option>
+          <ion-option>bedroom</ion-option>
+          <ion-option>hall</ion-option>
+          <ion-option>livingroom</ion-option>
+          <ion-option>sittingroom</ion-option>
+          <ion-option>study</ion-option>
+          <ion-option>other</ion-option>
+        </ion-select>
+      </ion-item>    
+  </ion-item-group>
+  <p>&nbsp;</p> 
+  <button ion-button block no-margin><span class="txt-orange" type="submit">Create Room</span> </button>
+  </form>
+</ion-content>

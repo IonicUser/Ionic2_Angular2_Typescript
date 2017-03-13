@@ -1,0 +1,29 @@
+page-profile{
+    
+
+/* 'Open Sans' font from Google Fonts */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+.profile-dp {
+  background:#56b7f1;
+  color:#fff;
+  height: 90px;
+}
+.profile-dp h2{
+  font-size: 2rem;
+  padding-bottom: 5px;
+}
+.profile-dp p{
+  color: #fff;  
+  font-size: 1.7rem;
+}
+.item-md .item-button{
+  font-size: 2.2rem;
+  color: #ccc;
+}
+.img_br{
+  border: 1px solid #929292;
+  width: 60px;
+  height: 60px;
+  padding:5px;
+}
+}

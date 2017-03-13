@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{roomName}}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content style="background:#000 !important;" *ngIf="room">
+  <ion-list no-padding no-margin>
+    <ion-item no-padding no-margin>
+      <ion-grid>
+        <span *ngFor="let roomDetails of room.devices">      
+				<ion-row no-padding class="bot_bdr" *ngFor="let i of roomDetails.switchappliances"> 
+					<ion-col width-50 no-padding class="btn_ml">
+              
+                       
+            <div (mousedown)="roundProgressClick(i,roomDetails)"  >              
+              <span *ngIf="switchShow==i._id" >
+                 <div  class="switch"  [ngClass]="{active: isActive}"  >
+                  <round-progress  class="roundC" [current]="40" [max]="100" [stroke]="20" [rounded]="true" (on)="isActive" [responsive]="true" [animationDelay]="700">   
+                  </round-progress>
+                <div class="btn_icon"> 	</div>
+                </div>
+            </span>
+            <span *ngIf="switchShow!=i._id">
+                <div  class="switch">
+                  <round-progress class="roundC" [current]="40" [max]="100" [stroke]="20" [rounded]="true" [responsive]="true" [animationDelay]="700">   
+                    </round-progress>
+                  <div class="btn_icon"> 	</div>          
+                </div>
+              </span>
+           </div>
+
+        </ion-col>
+        <ion-col no-padding class="content_txt">
+          <ion-row no-padding>
+            <ion-col width-75 no-padding class="room"> {{i.name}} </ion-col>
+            <ion-col no-padding> </ion-col>
+          </ion-row>
+          <ion-row no-padding>
+            <ion-col width-50 no-padding class="hrs">
+              <!-- <img src="assets/img/hrs.png"> -->Run. Hrs
+            </ion-col>
+            <ion-col width-50 no-padding class="kwh">
+              <!-- <img src="assets/img/kwh.png"> -->Est. Kwh
+            </ion-col>
+          </ion-row>
+          <ion-row no-padding>
+            <ion-col width-50 no-padding class="hrscount"> 04.30 </ion-col>
+            <ion-col width-50 no-padding class="kwhcount"> 9830 </ion-col>
+          </ion-row>
+          <ion-row no-padding>
+            <ion-col width-50 no-padding>
+              <!-- <img src="assets/img/setting.png"> Remote -->
+            </ion-col>
+            <ion-col width-50 no-padding class="settings">
+              <img src="assets/img/tv-remote.png" class="remote"> &nbsp;
+              <img src="assets/img/tv-remote.png" class="setting">
+            </ion-col>
+          </ion-row>
+        </ion-col>
+        </ion-row>
+        </span>
+      </ion-grid>
+    </ion-item>
+  </ion-list>
+</ion-content>
